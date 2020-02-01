@@ -43,6 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cards\BuildingDevCard.cs" />
+    <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\DevelopmentCard.cs" />
+    <Compile Include="Cards\ExpantionCard.cs" />
+    <Compile Include="Cards\FieldCard.cs" />
+    <Compile Include="Cards\EventCard.cs" />
+    <Compile Include="Cards\FleetDevCard.cs" />
+    <Compile Include="Cards\KnightDevCard.cs" />
+    <Compile Include="Enumerations\enumBuildingDevelopmentCards.cs" />
+    <Compile Include="Enumerations\enumEventCards.cs" />
+    <Compile Include="Enumerations\enumExpantionCards.cs" />
+    <Compile Include="Enumerations\enumFieldCards.cs" />
+    <Compile Include="Enumerations\enumFleetDevelopmentCards.cs" />
+    <Compile Include="Enumerations\enumKnightDevelopmentCards.cs" />
+    <Compile Include="Enumerations\enumAttackActionCards.cs" />
+    <Compile Include="Enumerations\enumDefenseActionCards.cs" />
+    <Compile Include="Enumerations\enumImprovementActionCards.cs" />
+    <Compile Include="Enumerations\enumTradeActionCards.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
