@@ -62,9 +62,11 @@
     <Compile Include="Enumerations\enumAttackActionCards.cs" />
     <Compile Include="Enumerations\enumDefenseActionCards.cs" />
     <Compile Include="Enumerations\enumImprovementActionCards.cs" />
+    <Compile Include="Enumerations\enumTokenTypes.cs" />
     <Compile Include="Enumerations\enumTradeActionCards.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tokens\Token.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
