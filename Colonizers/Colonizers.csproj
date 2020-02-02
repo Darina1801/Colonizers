@@ -51,8 +51,10 @@
     <Compile Include="Cards\EventCard.cs" />
     <Compile Include="Cards\FleetDevCard.cs" />
     <Compile Include="Cards\KnightDevCard.cs" />
+    <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enumerations\enumBuildingDevelopmentCards.cs" />
     <Compile Include="Enumerations\enumEventCards.cs" />
+    <Compile Include="Enumerations\enumEventDiceSides.cs" />
     <Compile Include="Enumerations\enumExpantionCards.cs" />
     <Compile Include="Enumerations\enumFieldCards.cs" />
     <Compile Include="Enumerations\enumFleetDevelopmentCards.cs" />
