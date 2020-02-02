@@ -55,16 +55,7 @@ namespace Colonizers
 
 		public bool FlipOver()
 		{
-			if (faceUp == true)
-			{
-				faceUp = false;
-			}
-			else
-			{
-				faceUp = true;
-			}
-
-			return faceUp;
+			return faceUp = !faceUp;
 		}
 
 		#endregion
