@@ -8,11 +8,11 @@ namespace Colonizers.Enumerations
 {
 	enum enumFleetDevelopmentCards
 	{
-		BrickFleet,
-		GoldFleet,
-		GrainFleet,
-		OreFleet,
-		WoodFleet,
-		WoolFleet,
+		BrickFleet, //1
+		GoldFleet, //1
+		GrainFleet, //1
+		OreFleet, //1
+		WoodFleet, //1
+		WoolFleet, //1
 	}
 }

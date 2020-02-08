@@ -9,27 +9,27 @@ namespace Colonizers.Enumerations
 	enum enumBuildingDevelopmentCards
 	{
 		// Common cards
-		Abbey,
-		Brickyard,
-		Forge,
-		Fort,
-		Mill,
-		Mine,
-		Sawmill,
-		Shepherd,
+		Abbey, //2
+		Brickyard, //1
+		Forge, //1
+		Fort, //3
+		Mill, //1
+		Mine, //1
+		Sawmill, //1
+		Shepherd, //1
 
 		// City cards
-		Bathhouses,
-		Church,
-		City​Council,
-		ColossusOfKatanStatue,
-		Harbor,
-		Library,
-		Market,
-		MerchantGuild,
-		Mint,
-		Plumbing,
-		TradingHouse,
+		Bathhouses, //2
+		Church, //2
+		City​Council, //2
+		ColossusOfKatanStatue, //1
+		Harbor, //1
+		Library, //2
+		Market, //1
+		MerchantGuild, //1
+		Mint, //1
+		Plumbing, //2
+		TradingHouse, //1
 
 	}
 }

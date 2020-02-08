@@ -8,7 +8,7 @@ namespace Colonizers.Enumerations
 {
 	enum enumTradeActionCards
 	{
-		Caravan,
-		Merchant,
+		Caravan, //1
+		Merchant, //2
 	}
 }
