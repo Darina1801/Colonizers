@@ -8,11 +8,11 @@ namespace Colonizers.Enumerations
 {
 	enum enumFieldCards
 	{
-		BrickHill,
-		GoldenGorge,
-		Fields,
-		Forest,
-		OreMountains,
-		Pastures,
+		BrickHill, //2 (I and II)
+		GoldenGorge, //1 (III)
+		Fields, //2 (III and IV)
+		Forest, //2 (I and VI)
+		OreMountains, //2 (IV and V)
+		Pastures, //2 (V and IV)
 	}
 }

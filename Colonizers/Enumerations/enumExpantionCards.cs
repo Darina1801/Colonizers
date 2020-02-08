@@ -8,8 +8,8 @@ namespace Colonizers.Enumerations
 {
 	enum enumExpantionCards
 	{
-		City,
-		Road,
-		Village,
+		City, //7
+		Road, //7
+		Village, //5
 	}
 }

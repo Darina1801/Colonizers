@@ -8,12 +8,12 @@ namespace Colonizers.Enumerations
 {
 	enum enumEventCards
 	{
-		Architect,
-		Duel,
-		EndOfTheYear,
-		HarvestYear,
-		Inventions,
-		Plague,
-		Rebellion,
+		Architect, //1
+		Duel, //1
+		EndOfTheYear, //1
+		HarvestYear, //2
+		Inventions, //2
+		Plague, //2
+		Rebellion, //1
 	}
 }

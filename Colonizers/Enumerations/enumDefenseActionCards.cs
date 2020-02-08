@@ -8,7 +8,7 @@ namespace Colonizers.Enumerations
 {
 	enum enumDefenseActionCards
 	{
-		Bishop,
-		Herbalist,
+		Bishop, //2
+		Herbalist, //2
 	}
 }

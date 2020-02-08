@@ -8,7 +8,7 @@ namespace Colonizers.Enumerations
 {
 	enum enumImprovementActionCards
 	{
-		Alchemist,
-		Intelligence,
+		Alchemist, //2
+		Intelligence, //2
 	}
 }

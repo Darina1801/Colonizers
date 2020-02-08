@@ -8,9 +8,9 @@ namespace Colonizers.Enumerations
 {
 	enum enumAttackActionCards
 	{
-		Arsonist,
-		BlackKnight,
-		Robbers,
-		Spy,
+		Arsonist, //2
+		BlackKnight, //3
+		Robbers, //1
+		Spy, //3
 	}
 }

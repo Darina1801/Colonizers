@@ -54,6 +54,7 @@
     <Compile Include="Deck.cs" />
     <Compile Include="Dice\Dice.cs" />
     <Compile Include="Enumerations\enumBuildingDevelopmentCards.cs" />
+    <Compile Include="Enumerations\enumCardType.cs" />
     <Compile Include="Enumerations\enumEventCards.cs" />
     <Compile Include="Enumerations\enumEventDiceSides.cs" />
     <Compile Include="Enumerations\enumExpantionCards.cs" />

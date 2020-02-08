@@ -8,14 +8,14 @@ namespace Colonizers.Enumerations
 {
 	enum enumKnightDevelopmentCards
 	{
-		GocIronFist,
-		HagenGrim,
-		FolkElegant,
-		KarlStrong,
-		KonradFast,
-		OttoBerserk,
-		PippinShort,
-		WalterCraven,
-		ZigfriedLendless,
+		GocIronFist, //1
+		HagenGrim, //1
+		FolkElegant, //1
+		KarlStrong, //1
+		KonradFast, //1
+		OttoBerserk, //1
+		PippinShort, //1
+		WalterCraven, //1
+		ZigfriedLendless, //1
 	}
 }
