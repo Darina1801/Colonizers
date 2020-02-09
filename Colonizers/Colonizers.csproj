@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardSets\CardSet.cs" />
     <Compile Include="Cards\BuildingDevCard.cs" />
     <Compile Include="Cards\Card.cs" />
     <Compile Include="Cards\DevelopmentCard.cs" />
