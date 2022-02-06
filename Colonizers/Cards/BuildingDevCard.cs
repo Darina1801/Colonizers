@@ -19,14 +19,17 @@ namespace Colonizers.Cards
 		int VictoryPoints
 		{
 			get { return victoryPoints; }
-			set { victoryPoints = value; }
+			set { VictoryPoints = value; }
 		}
 
 		#endregion
 
 		#region Constructors
 
+		public BuildingDevCard(int x, int y, int victoryPoints) : base(x, y, victoryPoints)
+		{
 
+		}
 
 		#endregion
 

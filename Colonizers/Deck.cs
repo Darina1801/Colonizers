@@ -12,7 +12,9 @@ namespace Colonizers
 	class Deck
 	{
 		#region Fields
-
+		/// <summary>
+		/// Initializes deck of cards
+		/// </summary>
 		List<Card> deck = new List<Card>();
 
 		#endregion

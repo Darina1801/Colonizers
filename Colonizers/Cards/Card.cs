@@ -6,14 +6,17 @@ using System.Threading.Tasks;
 
 namespace Colonizers
 {
-	class Card
+	public abstract class Card
 	{
 		#region Fields 
 
 		bool faceUp;
 		string name;
-		string cardType;
-		string cardDescription;
+		string type;
+		string description;
+
+		int positionX;
+		int positionY;
 
 		#endregion
 
@@ -22,32 +25,48 @@ namespace Colonizers
 		bool FaceUp
 		{
 			get { return faceUp; }
-			set { faceUp = value; }
+			set { FaceUp = value; }
 		}
 
 		string Name
 		{
 			get { return name; }
-			set { name = value; }
+			set { Name = value; }
 		}
 
-		string CardType
+		string Type
 		{
-			get { return cardType; }
-			set { cardType = value; }
+			get { return type; }
+			set { Type = value; }
 		}
 
-		string CardDescription
+		string Description
 		{
-			get { return cardDescription; }
-			set { cardDescription = value; }
+			get { return description; }
+			set { Description = value; }
+		}
+
+		public int PositionX
+		{
+			get { return positionX; }
+			protected set { positionX = value; }
+		}
+
+		public int PositionY
+		{
+			get { return positionY; }
+			protected set { positionY = value; }
 		}
 
 		#endregion
 
 		#region Constructors
 
-
+		protected Card(int x, int y)
+		{
+			PositionX = x;
+			PositionY = y;
+		}
 
 		#endregion
 

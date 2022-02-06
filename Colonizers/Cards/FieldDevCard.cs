@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Colonizers
 {
-	class FieldCard : Card
+	class FieldDevCard : DevelopmentCard
 	{
 		#region Fields 
 
 		int diceValue = 0;
 
+		//Change to enum with type and make new int value with quantity
 		int valueBrick = 0;
 		int valueGold = 0;
 		int valueGrain = 0;
@@ -69,7 +70,10 @@ namespace Colonizers
 
 		#region Constructors
 
-
+		public FieldDevCard(int x, int y) : base(x, y)
+		{
+			
+		}
 
 		#endregion
 

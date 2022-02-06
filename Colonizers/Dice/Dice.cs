@@ -8,7 +8,7 @@ namespace Colonizers.Dice
 {
 	class Dice
 	{
-		#region Fields
+		/*#region Fields
 
 		int topSide;
 		int numSides = 6;
@@ -47,6 +47,6 @@ namespace Colonizers.Dice
 			//topSide = RandomNumberGenerator.Next(numSides) + 1;
 		}
 
-		#endregion
+		#endregion*/
 	}
 }

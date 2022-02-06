@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace Colonizers
 {
-	class DevelopmentCard : Card
+	public class DevelopmentCard : Card
 	{
 		#region Fields 
 
-		bool isCityCard = false;
-
-		int tradePoints = 0;
+		int victoryPoints = 0;
 
 		int costBrick = 0;
-		int costGold = 0;
 		int costGrain = 0;
 		int costOre = 0;
 		int costWood = 0;
@@ -25,59 +22,52 @@ namespace Colonizers
 
 		#region Properties
 
-		bool IsCityCard
+		int VictoryPoints
 		{
-			get { return isCityCard; }
-			set { isCityCard = value; }
+			get { return victoryPoints; }
+			set { victoryPoints = value; }
 		}
 
-		int TradePoints
-		{
-			get { return tradePoints; }
-			set { tradePoints = value; }
-		}
-
-		int CostBrick
+		public int CostBrick
 		{
 			get { return costBrick; }
-			set { costBrick = value; }
+			protected set { costBrick = value; }
 		}
 
-		int CostGold
-		{
-			get { return costGold; }
-			set { costGold = value; }
-		}
-
-		int CostGrain
+		public int CostGrain
 		{
 			get { return costGrain; }
-			set { costGrain = value; }
+			protected set { costGrain = value; }
 		}
 
-		int CostOre
+		public int CostOre
 		{
 			get { return costOre; }
-			set { costOre = value; }
+			protected set { costOre = value; }
 		}
 
-		int CostWood
+		public int CostWood
 		{
 			get { return costWood; }
-			set { costWood = value; }
+			protected set { costWood = value; }
 		}
 
-		int CostWool
+		public int CostWool
 		{
 			get { return costWool; }
-			set { costWool = value; }
+			protected set { costWool = value; }
 		}
 
 		#endregion
 
 		#region Constructors
 
+		protected DevelopmentCard(int x, int y) : base(x, y) {}
 
+		protected DevelopmentCard(int x, int y, int victoryPoints) : base(x, y)
+		{
+			VictoryPoints = victoryPoints;
+		}
 
 		#endregion
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Colonizers.Cards;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,16 @@ namespace Colonizers
 		int valueOre = 0;
 		int valueWood = 0;
 		int valueWool = 0;
+
+		//Resorces + their positions
+		//Settelments + their positions
+		//Roads + their positions
+		//Buildings + their positions
+		//To pass it as arguments to the constructior???
+		Realm realm = new Realm();
+		
+		//Unite development cards and персонажей????
+		List<> hand;
 
 		#endregion
 
