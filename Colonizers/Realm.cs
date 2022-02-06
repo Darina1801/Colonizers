@@ -7,53 +7,82 @@ namespace Colonizers
 	{
 		#region Fields 
 
-		List<FieldDevCard> resorces;
-		List<DevelopmentCard> settelmentsAndRoads;
+		List<FieldDevCard> resources;
+		List<TableDevCard> settelmentsAndRoads;
 		List<BuildingDevCard> buildings;
+		List<KnightDevCard> knights;
+		List<FleetDevCard> fleets;
 
 		#endregion
 
 		#region Properties
 
-		List<FieldDevCard> Resources
+		public List<FieldDevCard> Resources
 		{
-			get { return resorces; }
-			set { Resources = value; }
+			get { return resources; }
+			set { resources = value; }
 		}
 
-		List<DevelopmentCard> SettelmentsAndRoads
+		public List<TableDevCard> SettelmentsAndRoads
 		{
 			get { return settelmentsAndRoads; }
-			set { SettelmentsAndRoads = value; }
+			set { settelmentsAndRoads = value; }
 		}
-		List<BuildingDevCard> Buildings
+		public List<BuildingDevCard> Buildings
 		{
 			get { return buildings; }
-			set { Buildings = value; }
+			set { buildings = value; }
+		}
+
+		public List<KnightDevCard> Knights
+		{
+			get { return knights; }
+			set { knights = value; }
+		}
+
+		public List<FleetDevCard> Fleets
+		{
+			get { return fleets; }
+			set { fleets = value; }
 		}
 
 		#endregion
 
 		#region Constructors
 
-
+		public Realm()
+		{
+			InitializeResources();
+			InitializeSettlementsAndRoads();
+			InitializeBuildings();
+			InitializeKnights();
+			InitializeFleets();
+		}
 
 		#endregion
 
 		#region Methods
 
-		public void InitializeResourses()
+		public void InitializeResources()
 		{
-			resorces = new List<FieldDevCard>();
+			Resources = new List<FieldDevCard>();
 		}
 
 		public void InitializeSettlementsAndRoads()
 		{
-			settelmentsAndRoads = new List<DevelopmentCard>();
+			SettelmentsAndRoads = new List<TableDevCard>();
 		}
 		public void InitializeBuildings()
 		{
-			buildings = new List<BuildingDevCard>();
+			Buildings = new List<BuildingDevCard>();
+		}
+		public void InitializeKnights()
+		{
+			Knights = new List<KnightDevCard>();
+		}
+		public void InitializeFleets()
+		{
+			Fleets = new List<FleetDevCard>();
 		}
 
 		#endregion

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Cards
 {
-	class KnightDevCard : DevelopmentCard
+	public class KnightDevCard : DevelopmentCard
 	{
 		#region Fields
 
@@ -33,13 +33,19 @@ namespace Colonizers.Cards
 
 		#region Constructors
 
+		public KnightDevCard(int x, int y) : base(x, y)
+		{
 
+		}
 
 		#endregion
 
 		#region Methods
 
-
+		public override void AddCard(Realm realm)
+		{
+			realm.Knights.Add(this);
+		}
 
 		#endregion
 	}

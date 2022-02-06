@@ -22,28 +22,28 @@ namespace Colonizers
 
 		#region Properties
 
-		bool FaceUp
+		public bool FaceUp
 		{
 			get { return faceUp; }
-			set { FaceUp = value; }
+			set { faceUp = value; }
 		}
 
 		string Name
 		{
 			get { return name; }
-			set { Name = value; }
+			set { name = value; }
 		}
 
 		string Type
 		{
 			get { return type; }
-			set { Type = value; }
+			set { type = value; }
 		}
 
 		string Description
 		{
 			get { return description; }
-			set { Description = value; }
+			set { description = value; }
 		}
 
 		public int PositionX

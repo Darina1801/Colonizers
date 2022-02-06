@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Cards
 {
-	class BuildingDevCard : DevelopmentCard
+	public class BuildingDevCard : DevelopmentCard
 	{
 		#region Fields
 
@@ -35,7 +35,10 @@ namespace Colonizers.Cards
 
 		#region Methods
 
-
+		public override void AddCard(Realm realm)
+		{
+			realm.Buildings.Add(this);
+		}
 
 		#endregion
 	}

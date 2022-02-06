@@ -6,37 +6,19 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Cards
 {
-	public class FleetDevCard : DevelopmentCard
+	public abstract class TableDevCard : DevelopmentCard
 	{
-		#region Fields
+		public TableDevCard(int x, int y, int victoryPoints) : base(x, y, victoryPoints) {}
 
-
-
-		#endregion
-
-		#region Properties
-
-		public FleetDevCard(int x, int y) : base(x, y)
-		{
-
-		}
-
-		#endregion
-
-		#region Constructors
-
-
-
-		#endregion
+		public TableDevCard(int x, int y) : base(x, y) {}
 
 		#region Methods
 
 		public override void AddCard(Realm realm)
 		{
-			realm.Fleets.Add(this);
+			realm.SettelmentsAndRoads.Add(this);
 		}
 
 		#endregion
-
 	}
 }

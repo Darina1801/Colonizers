@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Colonizers
 {
-	public class DevelopmentCard : Card
+	public abstract class DevelopmentCard : Card
 	{
 		#region Fields 
 
@@ -73,7 +73,7 @@ namespace Colonizers
 
 		#region Methods
 
-
+		public abstract void AddCard(Realm realm); 
 
 		#endregion
 	}

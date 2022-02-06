@@ -53,11 +53,13 @@
     <Compile Include="Cards\EventCard.cs" />
     <Compile Include="Cards\FleetDevCard.cs" />
     <Compile Include="Cards\KnightDevCard.cs" />
+    <Compile Include="Cards\TableDevCard.cs" />
+    <Compile Include="Enumerations\enumPlayerType.cs" />
     <Compile Include="Realm.cs" />
     <Compile Include="Cards\RoadDevCard.cs" />
     <Compile Include="Cards\VillageDevCard.cs" />
     <Compile Include="Deck.cs" />
-    <Compile Include="Dice\Dice.cs" />
+    <Compile Include="Dice\Die.cs" />
     <Compile Include="Enumerations\enumBuildingDevelopmentCards.cs" />
     <Compile Include="Enumerations\enumCardType.cs" />
     <Compile Include="Enumerations\enumEventCards.cs" />

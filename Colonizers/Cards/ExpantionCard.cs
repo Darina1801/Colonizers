@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Colonizers
 {
-	class ExpantionCard : Card
+	/*class ExpantionCard : Card
 	{
 		#region Fields 
 
@@ -78,5 +78,5 @@ namespace Colonizers
 
 
 		#endregion
-	}
+	}*/
 }

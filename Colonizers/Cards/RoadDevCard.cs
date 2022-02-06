@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Cards
 {
-	public class RoadDevCard : DevelopmentCard
+	public class RoadDevCard : TableDevCard
 	{
 		#region Constructors
 
@@ -14,6 +14,15 @@ namespace Colonizers.Cards
 		{
 			CostWood = 1;
 			CostBrick = 2;
+		}
+
+		#endregion
+
+		#region Methods
+
+		public override void AddCard(Realm realm)
+		{
+			base.AddCard(realm);
 		}
 
 		#endregion

@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Enumerations
 {
-	enum enumEventDiceSides
+	public enum enumPlayerType
 	{
-		NewEvent1,
-		Highwaymen,
-		TradePointsDuel,
-		TournamentPointsDuel,
-		YearOfAbundance,
-		NewEvent6,
+		RedAndWhite,
+		RedAndBlack,
 	}
 }

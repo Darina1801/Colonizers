@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Dice
 {
-	class Dice
+	public class Die
 	{
-		/*#region Fields
+		#region Fields
 
 		int topSide;
-		int numSides = 6;
+		const int NumSides = 6;
 
 		#endregion
 
@@ -22,19 +22,14 @@ namespace Colonizers.Dice
 			get { return topSide; }
 		}
 
-		public int NumSides
-		{
-			get { return numSides; }
-		}
 
 		#endregion
 
 		#region Constructors
 
-		public Dice(int numSides)
+		public Die()
 		{
-			this.numSides = numSides;
-			topSide = 1;
+			topSide = 6;
 		}
 
 		#endregion
@@ -43,10 +38,9 @@ namespace Colonizers.Dice
 
 		public void Roll()
 		{
-			//Create Random number generator
-			//topSide = RandomNumberGenerator.Next(numSides) + 1;
+			topSide = RandomNumberGenerator.Next(NumSides) + 1;
 		}
 
-		#endregion*/
+		#endregion
 	}
 }

@@ -1,17 +1,18 @@
 ﻿using Colonizers.Cards;
-using System;
+using Colonizers.Enumerations;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Colonizers
 {
-	class Player
+	public class Player
 	{
 		#region Fields 
 
-		int victoryPoints = 0;
+		enumPlayerType playerType;
+		string name;
+		Realm realm;
+
+		int victoryPoints = 2; //Because at the begining of the game each player has two villages
 		int tournamentPoints = 0;
 		int knightPoints = 0;
 
@@ -22,21 +23,32 @@ namespace Colonizers
 		int valueWood = 0;
 		int valueWool = 0;
 
-		//Resorces + their positions
-		//Settelments + their positions
-		//Roads + their positions
-		//Buildings + their positions
-		//To pass it as arguments to the constructior???
-		Realm realm = new Realm();
-		
 		//Unite development cards and персонажей????
-		List<> hand;
+		List<Card> hand;
 
 		#endregion
 
 		#region Properties
 
-		int VictoryPoints
+		enumPlayerType PlayerType
+		{
+			get { return playerType; }
+			set { playerType = value; }
+		}
+
+		public string Name 
+		{
+			get { return name; }
+			internal set { name = value; }
+		}
+
+		Realm Realm
+		{
+			get { return realm; }
+			set { realm = value; }
+		}
+
+		public int VictoryPoints
 		{
 			get { return victoryPoints; }
 			set { victoryPoints = value; }
@@ -94,13 +106,40 @@ namespace Colonizers
 
 		#region Constructors
 
-
+		public Player(enumPlayerType playerType)
+		{
+			PlayerType = playerType;
+			GenerateRealm();
+		}
 
 		#endregion
 
 		#region Methods
 
+		void GenerateRealm()
+		{
+			this.Realm = new Realm();
+			BuildCard(new RoadDevCard(0, 0));
+			BuildCard(new VillageDevCard(-1, 0));
+			BuildCard(new VillageDevCard(1, 0));
+			BuildCard(new FieldDevCard(-2, 1));
+			BuildCard(new FieldDevCard(0, 1));
+			BuildCard(new FieldDevCard(2, 1));
+			BuildCard(new FieldDevCard(-2, -1));
+			BuildCard(new FieldDevCard(0, -1));
+			BuildCard(new FieldDevCard(2, -1));
+		}
 
+		public void BuildCard(DevelopmentCard devCard)
+		{
+			devCard.AddCard(this.Realm);
+			devCard.FaceUp = true;
+		}
+
+		public void PlayCard(Card card)
+		{
+
+		}
 
 		#endregion
 	}

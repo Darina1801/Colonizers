@@ -5,16 +5,24 @@ namespace Colonizers
 	/// <summary>
 	/// Generates random numbers
 	/// </summary>
-	class RandomNumberGenerator
+	static class RandomNumberGenerator
 	{
-		Random rand;
+		static Random rand;
 
 		/// <summary>
 		/// Initializes the random number generator
 		/// </summary>
-		public void Initialize()
+		static void Initialize()
 		{
 			rand = new Random();
+		}
+
+		/// <summary>
+		/// Initialise RandomNumberGenerator with first call 
+		/// </summary>
+		static RandomNumberGenerator()
+		{
+			Initialize();
 		}
 
 		/// <summary>
@@ -25,7 +33,7 @@ namespace Colonizers
 		///     to be generated (must be greater than or equal to 0)</param>
 		/// <returns>A 32-bit integer that is greater than or equal 
 		///     to 0, and less than maxValue</returns>
-		public int Next(int maxValue)
+		public static int Next(int maxValue)
 		{
 			return rand.Next(maxValue);
 		}

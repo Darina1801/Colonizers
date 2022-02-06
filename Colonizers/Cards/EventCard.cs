@@ -25,7 +25,10 @@ namespace Colonizers
 
 		#region Constructors
 
-
+		public EventCard(int x, int y) : base(x, y)
+		{
+			
+		}
 
 		#endregion
 
