@@ -1,6 +1,7 @@
 ﻿using Colonizers.Dice;
 using Colonizers.Enumerations;
 using System;
+using System.Linq;
 
 namespace Colonizers
 {
@@ -10,6 +11,8 @@ namespace Colonizers
 
 		static Die resourseDie;
 		static Die eventDie;
+
+		
 
 		#endregion
 
@@ -39,10 +42,11 @@ namespace Colonizers
 
 				resourseDie.Roll();
 				eventDie.Roll();
-				
-				
-				
-				
+
+				//Increase resources with die roll
+				//player1.Realm.Resources.Where(x => x.DiceValue == resourseDie.TopSide).ToList().ForEach(x => x.);
+
+				var eventDieResult = (enumEventDiceSides)eventDie.TopSide;
 			}
 			while (CheckPoints(player) == null);
 			Victory(player.Name);

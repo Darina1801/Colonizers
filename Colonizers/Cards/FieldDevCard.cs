@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Colonizers
+﻿namespace Colonizers
 {
 	public class FieldDevCard : DevelopmentCard
 	{
@@ -24,43 +18,43 @@ namespace Colonizers
 
 		#region Properties
 
-		int DiceValue
+		public int DiceValue
 		{
 			get { return diceValue; }
 			set { diceValue = value; }
 		}
 
-		int ValueBrick
+		public int ValueBrick
 		{
 			get { return valueBrick; }
 			set { valueBrick = value; }
 		}
 
-		int ValueGold
+		public int ValueGold
 		{
 			get { return valueGold; }
 			set { valueGold = value; }
 		}
 
-		int ValueGrain
+		public int ValueGrain
 		{
 			get { return valueGrain; }
 			set { valueGrain = value; }
 		}
 
-		int ValueOre
+		public int ValueOre
 		{
 			get { return valueOre; }
 			set { valueOre = value; }
 		}
 
-		int ValueWood
+		public int ValueWood
 		{
 			get { return valueWood; }
 			set { valueWood = value; }
 		}
 
-		int ValueWool
+		public int ValueWool
 		{
 			get { return valueWool; }
 			set { valueWool = value; }
@@ -70,9 +64,9 @@ namespace Colonizers
 
 		#region Constructors
 
-		public FieldDevCard(int x, int y) : base(x, y)
+		public FieldDevCard(int x, int y, int diceValue) : base(x, y)
 		{
-			
+			DiceValue = diceValue;
 		}
 
 		#endregion

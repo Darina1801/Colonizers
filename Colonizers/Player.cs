@@ -42,7 +42,7 @@ namespace Colonizers
 			internal set { name = value; }
 		}
 
-		Realm Realm
+		public Realm Realm
 		{
 			get { return realm; }
 			set { realm = value; }
@@ -122,12 +122,12 @@ namespace Colonizers
 			BuildCard(new RoadDevCard(0, 0));
 			BuildCard(new VillageDevCard(-1, 0));
 			BuildCard(new VillageDevCard(1, 0));
-			BuildCard(new FieldDevCard(-2, 1));
-			BuildCard(new FieldDevCard(0, 1));
-			BuildCard(new FieldDevCard(2, 1));
-			BuildCard(new FieldDevCard(-2, -1));
-			BuildCard(new FieldDevCard(0, -1));
-			BuildCard(new FieldDevCard(2, -1));
+			BuildCard(new FieldDevCard(-2, 1, 1));
+			BuildCard(new FieldDevCard(0, 1, 2));
+			BuildCard(new FieldDevCard(2, 1, 3));
+			BuildCard(new FieldDevCard(-2, -1, 4));
+			BuildCard(new FieldDevCard(0, -1, 5));
+			BuildCard(new FieldDevCard(2, -1, 6));
 		}
 
 		public void BuildCard(DevelopmentCard devCard)

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Colonizers.Dice
+﻿namespace Colonizers.Dice
 {
 	public class Die
 	{
 		#region Fields
 
 		int topSide;
-		const int NumSides = 6;
+		const int NumSides = 5;
 
 		#endregion
 
