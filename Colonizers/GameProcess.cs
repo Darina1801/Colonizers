@@ -37,6 +37,8 @@ namespace Colonizers
 			Player currentPlayer = player2;
 			do
 			{
+				endTurn = false;
+
 				// First switch player who's turn ended
 				if (currentPlayer == player1) currentPlayer = player2;
 				else currentPlayer = player1;
@@ -57,7 +59,7 @@ namespace Colonizers
 					AskForAction(currentPlayer);
 				}
 			}
-			while (CheckPoints(currentPlayer) == null);
+			while (GetWinner(currentPlayer) == null);
 			Victory(currentPlayer.Name);
 		}
 
@@ -71,7 +73,7 @@ namespace Colonizers
 			}
 		}
 
-		static Player CheckPoints(Player player)
+		static Player GetWinner(Player player)
 		{
 			if (player.VictoryPoints == 12)
 			{
