@@ -1,18 +1,15 @@
-﻿namespace Colonizers
+﻿using Colonizers.Enumerations;
+
+namespace Colonizers
 {
 	public class FieldDevCard : DevelopmentCard
 	{
 		#region Fields 
 
-		int diceValue = 0;
-
-		//Change to enum with type and make new int value with quantity
-		int valueBrick = 0;
-		int valueGold = 0;
-		int valueGrain = 0;
-		int valueOre = 0;
-		int valueWood = 0;
-		int valueWool = 0;
+		int diceValue;
+		enumFieldCards resourseType;
+		int quantityOfResourse = 0;
+		int resourseExchangeRate = 3;
 
 		#endregion
 
@@ -24,49 +21,32 @@
 			set { diceValue = value; }
 		}
 
-		public int ValueBrick
+		public int QuantityOfResourse
 		{
-			get { return valueBrick; }
-			set { valueBrick = value; }
+			get { return quantityOfResourse; }
+			set { quantityOfResourse = value; }
 		}
 
-		public int ValueGold
+		public enumFieldCards ResourseType
 		{
-			get { return valueGold; }
-			set { valueGold = value; }
+			get { return resourseType; }
+			set { resourseType = value; }
 		}
 
-		public int ValueGrain
+		public int ResourseExchangeRate
 		{
-			get { return valueGrain; }
-			set { valueGrain = value; }
-		}
-
-		public int ValueOre
-		{
-			get { return valueOre; }
-			set { valueOre = value; }
-		}
-
-		public int ValueWood
-		{
-			get { return valueWood; }
-			set { valueWood = value; }
-		}
-
-		public int ValueWool
-		{
-			get { return valueWool; }
-			set { valueWool = value; }
+			get { return resourseExchangeRate; }
+			set { resourseExchangeRate = value; }
 		}
 
 		#endregion
 
 		#region Constructors
 
-		public FieldDevCard(int x, int y, int diceValue) : base(x, y)
+		public FieldDevCard(int x, int y, int diceValue, enumFieldCards resourseType) : base(x, y)
 		{
 			DiceValue = diceValue;
+			ResourseType = resourseType;
 		}
 
 		#endregion
@@ -76,6 +56,14 @@
 		public override void AddCard(Realm realm)
 		{
 			realm.Resources.Add(this);
+		}
+
+		public void IncreaseResourseAmount()
+		{
+			if (QuantityOfResourse < 3)
+			{
+				QuantityOfResourse++;
+			}
 		}
 
 		#endregion

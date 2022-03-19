@@ -1,4 +1,5 @@
-﻿using Colonizers.Dice;
+﻿using Colonizers.Actions;
+using Colonizers.Dice;
 using Colonizers.Enumerations;
 using System;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Colonizers
 		static Die resourseDie;
 		static Die eventDie;
 
-		
+		static bool endTurn;
 
 		#endregion
 
@@ -33,23 +34,41 @@ namespace Colonizers
 
 		public static void Turn(Player player1, Player player2)
 		{
-			Player player = player2;
+			Player currentPlayer = player2;
 			do
 			{
 				// First switch player who's turn ended
-				if (player == player1) player = player2;
-				else player = player1;
+				if (currentPlayer == player1) currentPlayer = player2;
+				else currentPlayer = player1;
 
 				resourseDie.Roll();
 				eventDie.Roll();
 
 				//Increase resources with die roll
-				//player1.Realm.Resources.Where(x => x.DiceValue == resourseDie.TopSide).ToList().ForEach(x => x.);
+				player1.Realm.Resources.Where(x => x.DiceValue == resourseDie.TopSide).ToList().ForEach(x => x.IncreaseResourseAmount());
+				player2.Realm.Resources.Where(x => x.DiceValue == resourseDie.TopSide).ToList().ForEach(x => x.IncreaseResourseAmount());
 
+				//TODO Apply eventDieResult
 				var eventDieResult = (enumEventDiceSides)eventDie.TopSide;
+
+				//currentPlayerActions
+				while (!endTurn)
+				{
+					AskForAction(currentPlayer);
+				}
 			}
-			while (CheckPoints(player) == null);
-			Victory(player.Name);
+			while (CheckPoints(currentPlayer) == null);
+			Victory(currentPlayer.Name);
+		}
+
+		static void AskForAction(Player player)
+		{
+			PlayerAction action = player.ActionChoice();
+
+			if (action is EndTurnAction)
+			{
+				endTurn = true;
+			}
 		}
 
 		static Player CheckPoints(Player player)

@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actions\BuildCardAction.cs" />
+    <Compile Include="Actions\EndTurnAction.cs" />
+    <Compile Include="Actions\PlayCardAction.cs" />
+    <Compile Include="Actions\TradeAction.cs" />
     <Compile Include="CardSets\CardSet.cs" />
     <Compile Include="Cards\BuildingDevCard.cs" />
     <Compile Include="Cards\Card.cs" />
@@ -55,6 +59,7 @@
     <Compile Include="Cards\KnightDevCard.cs" />
     <Compile Include="Cards\TableDevCard.cs" />
     <Compile Include="Enumerations\enumPlayerType.cs" />
+    <Compile Include="Actions\PlayerAction.cs" />
     <Compile Include="Realm.cs" />
     <Compile Include="Cards\RoadDevCard.cs" />
     <Compile Include="Cards\VillageDevCard.cs" />
@@ -83,5 +88,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

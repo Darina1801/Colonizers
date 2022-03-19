@@ -1,4 +1,5 @@
-﻿using Colonizers.Cards;
+﻿using Colonizers.Actions;
+using Colonizers.Cards;
 using Colonizers.Enumerations;
 using System.Collections.Generic;
 
@@ -122,12 +123,12 @@ namespace Colonizers
 			BuildCard(new RoadDevCard(0, 0));
 			BuildCard(new VillageDevCard(-1, 0));
 			BuildCard(new VillageDevCard(1, 0));
-			BuildCard(new FieldDevCard(-2, 1, 1));
-			BuildCard(new FieldDevCard(0, 1, 2));
-			BuildCard(new FieldDevCard(2, 1, 3));
-			BuildCard(new FieldDevCard(-2, -1, 4));
-			BuildCard(new FieldDevCard(0, -1, 5));
-			BuildCard(new FieldDevCard(2, -1, 6));
+			BuildCard(new FieldDevCard(-2, 1, 1, enumFieldCards.GoldenGorge));
+			BuildCard(new FieldDevCard(0, 1, 2, enumFieldCards.Fields));
+			BuildCard(new FieldDevCard(2, 1, 3, enumFieldCards.OreMountains));
+			BuildCard(new FieldDevCard(-2, -1, 4, enumFieldCards.Pastures));
+			BuildCard(new FieldDevCard(0, -1, 5, enumFieldCards.Forest));
+			BuildCard(new FieldDevCard(2, -1, 6, enumFieldCards.BrickHill));
 		}
 
 		public void BuildCard(DevelopmentCard devCard)
@@ -139,6 +140,11 @@ namespace Colonizers
 		public void PlayCard(Card card)
 		{
 
+		}
+
+		public PlayerAction ActionChoice()
+		{
+			return new EndTurnAction();
 		}
 
 		#endregion

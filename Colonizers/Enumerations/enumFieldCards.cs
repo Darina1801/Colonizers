@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Colonizers.Enumerations
 {
-	enum enumFieldCards
+	public enum enumFieldCards
 	{
 		BrickHill, //2 (I and II)
 		GoldenGorge, //1 (III)
